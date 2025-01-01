@@ -11,7 +11,14 @@ app.use(
 
 app.use(express.urlencoded({ extended: true }));
 import cors from "cors";
-app.use(cors());
+app.use(cors(
+{
+  origin: "*", // allow all origins
+
+}
+
+
+));
 import { configDotenv } from "dotenv";
 configDotenv();
 
