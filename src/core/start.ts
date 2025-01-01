@@ -17,8 +17,8 @@ configDotenv();
 
 import sendOtpToEmail from "../routes/sendOTPtoEmail.js";
 import verifyOTP from "../routes/verifyOTP.js";
-app.use(sendOtpToEmail);
-app.use(verifyOTP);
+app.use("/db-less-otp",sendOtpToEmail);
+app.use("/db-less-otp",verifyOTP);
 
 // handel un-handled routes
 app.use((req, res) => {
