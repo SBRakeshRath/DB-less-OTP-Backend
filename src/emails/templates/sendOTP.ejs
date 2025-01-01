@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OTP Verification</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    .header {
+      background-color: #ed29f0;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .header h1 {
+      color: white;
+      text-align: center;
+    }
+    .emailBodyContainer {
+      padding: 30px 10px;
+      background-color: #ffd4d2;
+    }
+    .warning p {
+      margin-bottom: 20px;
+    }
+    .otpContainer {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .footer {
+      background-color: #ed29f0;
+      padding: 10px 20px;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>OTP Testing</h1>
+      </div>
+      <div class="emailBodyContainer">
+        <div class="warning">
+          <p>
+            This OTP has no significance it is just a test. If you have not
+            requested it and and you are getting it then please ignore it.
+          </p>
+          <p>
+            If anybody is spamming you using this then please write a email to
+            sbrakeshrath@gmail.com
+          </p>
+        </div>
+        <div class="otpContainer"><%= otp %></div>
+      </div>
+      <div class="footer">This template is not made by girl.</div>
+    </div>
+  </body>
+</html>
