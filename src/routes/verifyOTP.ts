@@ -11,7 +11,13 @@ verifyOTP.post("/verify-otp", async (req, res) => {
     token: z.string(),
   });
 
+  if(schema.safeParse(req.body).success === false){
+    res.status(400).json({ message: "Invalid Body" });
+    return
+  }
+
   const { otp, token } = schema.parse(req.body);
+  console.log(otp, token);
 
   const tokenRes = verifyJWTToken(token)
   if (!tokenRes) {
@@ -25,7 +31,7 @@ verifyOTP.post("/verify-otp", async (req, res) => {
   if (hashedOTP(otp) === hashedOtp) {
     res.status(200).json({ message: "OTP verified for email: " + email });
   } else {
-    res.status(400).json({ message: "Invalid OTP" });
+    res.status(400).json({ message: "Incorrect OTP" });
   }
 });
 
