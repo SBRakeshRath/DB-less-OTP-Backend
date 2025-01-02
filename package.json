@@ -1,6 +1,6 @@
 {
-  "name": "telegram-bot",
-  "version": "1.0.0",
+  "name": "db-less-otp-project-frontend",
+  "version": "0.0.0",
   "description": "",
   "type": "module",
   "scripts": {
