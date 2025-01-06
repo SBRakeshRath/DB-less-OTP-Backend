@@ -22,7 +22,7 @@ sendOtpToEmail.post("/send-otp-to-email", async (req, res) => {
   const { email } = reqData.data;
 
   const otp = createOTP(6);
-  const hashedOtp = hashedOTP(otp);
+  const hashedOtp = hashedOTP(otp,email);
 
   try {
     if (await sendEmail(otp, email)) {

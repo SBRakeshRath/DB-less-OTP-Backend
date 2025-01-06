@@ -17,7 +17,6 @@ verifyOTP.post("/verify-otp", async (req, res) => {
   }
 
   const { otp, token } = schema.parse(req.body);
-  console.log(otp, token);
 
   const tokenRes = verifyJWTToken(token)
   if (!tokenRes) {
@@ -28,7 +27,7 @@ verifyOTP.post("/verify-otp", async (req, res) => {
   const { otp: hashedOtp,email } = tokenRes as jwtOTPTokenPayload
 
 
-  if (hashedOTP(otp) === hashedOtp) {
+  if (hashedOTP(otp,email) === hashedOtp) {
     res.status(200).json({ message: "OTP verified for email: " + email });
   } else {
     res.status(400).json({ message: "Incorrect OTP" });
