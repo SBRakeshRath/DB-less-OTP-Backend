@@ -1,4 +1,4 @@
-# db-less-otp-project-frontend
+# db-less-otp-project-Backend
 
 This project is just a initiative to make the otp process completely db less. This project is a frontend part of the project. The backend part of the project is [here](https://github.com/SBRakeshRath/DB-less-OTP-Frontend)
 
